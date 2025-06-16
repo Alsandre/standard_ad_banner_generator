@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Standard Ad Banner Generator - Choose from multiple versions of our interactive scratch-off banner template generator." />
+    <meta name="keywords" content="banner generator, scratch effect, interactive banners, web banners, advertising" />
+    <meta name="author" content="Scratch Banner Generator" />
+    <title>Standard Ad Banner Generator - Choose Your Version</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      /* Reset and Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        line-height: 1.6;
+        color: #1a1a1a;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+
+      /* Container */
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 1rem;
+        min-height: 100vh;
+      }
+
+      /* Header */
+      .header {
+        text-align: center;
+        margin-bottom: 2rem;
+        padding: 2rem 0;
+      }
+
+      .header-content {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 2rem;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      }
+
+      .header-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #2d3748;
+        margin-bottom: 0.5rem;
+      }
+
+      .header-subtitle {
+        font-size: 1.1rem;
+        color: #718096;
+        font-weight: 400;
+      }
+
+      /* Main Content */
+      .main {
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 2rem;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #2d3748;
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      /* Version Cards */
+      .version-grid {
+        display: grid;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .version-card {
+        background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+        border: 2px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 1.5rem;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        color: inherit;
+        display: block;
+      }
+
+      .version-card:hover {
+        border-color: #667eea;
+        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
+        transform: translateY(-2px);
+      }
+
+      .version-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #2d3748;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .version-badge {
+        background: #667eea;
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+
+      .version-description {
+        color: #718096;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+      }
+
+      .version-features {
+        list-style: none;
+        margin-bottom: 1rem;
+      }
+
+      .version-features li {
+        color: #4a5568;
+        font-size: 0.9rem;
+        margin-bottom: 0.25rem;
+        padding-left: 1rem;
+        position: relative;
+      }
+
+      .version-features li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #48bb78;
+        font-weight: bold;
+      }
+
+      .version-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #667eea;
+        font-weight: 500;
+        font-size: 0.95rem;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .version-link:hover {
+        color: #5a67d8;
+      }
+
+      /* Responsive Design */
+      @media (min-width: 768px) {
+        .container {
+          max-width: 900px;
+          padding: 2rem;
+        }
+
+        .header-title {
+          font-size: 2.5rem;
+        }
+
+        .header-subtitle {
+          font-size: 1.2rem;
+        }
+
+        .main {
+          padding: 3rem;
+        }
+
+        .version-grid {
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .container {
+          max-width: 1000px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-content">
+          <h1 class="header-title">🎨 Standard Ad Banner Generator</h1>
+          <p class="header-subtitle">Choose your preferred version of our interactive scratch-off banner template generator</p>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main">
+        <h2 class="section-title">Available Versions</h2>
+
+        <div class="version-grid">
+          <!-- Version 1 -->
+          <a href="v1/index_v3.html" class="version-card">
+            <div class="version-title">
+              Version 1
+              <span class="version-badge">Advanced</span>
+            </div>
+            <p class="version-description">The most advanced version with comprehensive preview system and enhanced configuration options.</p>
+            <ul class="version-features">
+              <li>Advanced banner preview with real-time updates</li>
+              <li>Two-column layout for better organization</li>
+              <li>Enhanced URL input with tooltips and copy buttons</li>
+              <li>Comprehensive canvas configuration</li>
+              <li>Professional UI with improved UX</li>
+            </ul>
+            <span class="version-link"> Open Version 1 → </span>
+          </a>
+
+          <!-- Version 2 -->
+          <a href="v2/index_v2.html" class="version-card">
+            <div class="version-title">
+              Version 2
+              <span class="version-badge">Enhanced</span>
+            </div>
+            <p class="version-description">Enhanced version with improved UI and better user experience features.</p>
+            <ul class="version-features">
+              <li>Improved banner preview system</li>
+              <li>Enhanced form layout and styling</li>
+              <li>Better URL input handling</li>
+              <li>Loading overlays and success modals</li>
+              <li>Responsive design improvements</li>
+            </ul>
+            <span class="version-link"> Open Version 2 → </span>
+          </a>
+
+          <!-- Version 3 -->
+          <a href="v3/index_v1.html" class="version-card">
+            <div class="version-title">
+              Version 3
+              <span class="version-badge">Classic</span>
+            </div>
+            <p class="version-description">The original version with clean, simple interface and all essential features.</p>
+            <ul class="version-features">
+              <li>Clean and simple interface</li>
+              <li>Essential banner configuration options</li>
+              <li>Custom dimensions support</li>
+              <li>Collapsible advanced settings</li>
+              <li>Lightweight and fast</li>
+            </ul>
+            <span class="version-link"> Open Version 3 → </span>
+          </a>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

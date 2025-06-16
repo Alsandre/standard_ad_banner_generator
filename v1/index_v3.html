@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Create interactive scratch-off banner templates with ease. Professional banner generator with customizable effects and responsive design." />
+    <meta name="keywords" content="banner generator, scratch effect, interactive banners, web banners, advertising" />
+    <meta name="author" content="Scratch Banner Generator" />
+    <title>Scratch Banner Template Generator V3 - Advanced Preview</title>
+    <link rel="stylesheet" href="./styles-v3.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-content">
+          <div class="back-to-main">
+            <a href="../index.html" class="back-link">← Back to Main</a>
+          </div>
+          <h1 class="header-title">🎨 Scratch Banner Generator</h1>
+          <p class="header-subtitle">Create interactive scratch-off banner templates with ease</p>
+        </div>
+      </header>
+
+      <!-- Main Form -->
+      <main class="main">
+        <!-- Banner Preview Container (Outside Columns) -->
+        <div class="banner-preview-container">
+          <h2 class="preview-title">Banner Preview</h2>
+          <div id="bannerPreview" class="banner-preview">
+            <div class="preview-box">
+              <div id="previewBanner" class="preview-banner">
+                <span class="preview-text">Select a banner size</span>
+              </div>
+              <div id="previewDimensions" class="preview-dimensions"></div>
+            </div>
+          </div>
+        </div>
+
+        <form id="bannerForm" class="form">
+          <!-- Form Container for Two Columns -->
+          <div class="form-container">
+            <!-- Left Column: Banner Configuration -->
+            <div class="form-column banner-config">
+              <!-- Banner Size Section -->
+              <section class="form-section">
+                <h2 class="section-title">Banner Configuration</h2>
+
+                <div class="form-group">
+                  <label for="bannerPreset" class="form-label">Banner Size</label>
+                  <select id="bannerPreset" class="form-select" required>
+                    <option value="">Select banner size...</option>
+                    <option value="CSC">CSC - Custom Size Creative (640×360)</option>
+                    <option value="HPD">HPD - Half Page Display (300×600)</option>
+                    <option value="HPM">HPM - Half Page Mobile (300×600)</option>
+                    <option value="LBD">LBD - Leaderboard (728×90)</option>
+                    <option value="PSM">PSM - Portrait Mobile (320×480)</option>
+                    <option value="WMD">WMD - Wide Medium Desktop (994×500)</option>
+                    <option value="SKD">SKD - Skyscraper Desktop (160×600)</option>
+                    <option value="RIM">RIM - Rectangle Mobile (320×416)</option>
+                    <option value="RCM">RCM - Rectangle Medium (300×250)</option>
+                    <option value="RCD">RCD - Rectangle Desktop (300×250)</option>
+                    <option value="WBD">WBD - Wide Banner Desktop (994×250)</option>
+                  </select>
+                </div>
+              </section>
+
+              <!-- Basic Settings Section -->
+              <section class="form-section">
+                <div class="form-group">
+                  <label for="bannerName" class="form-label">Banner Folder Name</label>
+                  <input type="text" id="bannerName" class="form-input" placeholder="25_000_CSC_HA_Codev" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="clickTagUrl" class="form-label">Click Tag URL</label>
+                  <div class="url-input-container">
+                    <input type="url" id="clickTagUrl" class="form-input url-input" value="https://codevelop.io/" required />
+                    <div class="url-tooltip">https://codevelop.io/</div>
+                    <button type="button" class="copy-button">Copy</button>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="description" class="form-label">Description</label>
+                  <input type="text" id="description" class="form-input" value="Scratch-off interactive banner ad" />
+                </div>
+              </section>
+            </div>
+
+            <!-- Right Column: Effect Configuration -->
+            <div class="form-column effect-config">
+              <!-- Effect Configuration Section -->
+              <section class="form-section">
+                <h2 class="section-title">Effect Configuration</h2>
+
+                <!-- Brush Settings -->
+                <div class="settings-group">
+                  <h3 class="settings-title">Brush Settings</h3>
+
+                  <div class="form-group">
+                    <label for="brushSize" class="form-label">Brush Size (px)</label>
+                    <div class="range-input">
+                      <input type="range" id="brushSize" class="form-range" min="10" max="200" value="60" />
+                      <span id="brushSizeValue" class="range-value">60</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="brushRandomness" class="form-label">Brush Randomness</label>
+                    <div class="range-input">
+                      <input type="range" id="brushRandomness" class="form-range" min="0" max="100" value="0" />
+                      <span id="brushRandomnessValue" class="range-value">0</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="brushStepSize" class="form-label">Brush Step Size</label>
+                    <div class="range-input">
+                      <input type="range" id="brushStepSize" class="form-range" min="1" max="10" value="1" />
+                      <span id="brushStepSizeValue" class="range-value">1</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Image Settings -->
+                <div class="settings-group">
+                  <h3 class="settings-title">Image URLs</h3>
+
+                  <div class="form-group">
+                    <label for="overlayImageUrl" class="form-label">Overlay Image URL</label>
+                    <div class="url-input-container">
+                      <input type="url" id="overlayImageUrl" class="form-input url-input" value="https://previews-only.b-cdn.net/Offerz/src/scratch/hpa_top.webp" />
+                      <div class="url-tooltip">https://previews-only.b-cdn.net/Offerz/src/scratch/hpa_top.webp</div>
+                      <button type="button" class="copy-button">Copy</button>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="hiddenContentImageUrl" class="form-label">Hidden Content Image URL</label>
+                    <div class="url-input-container">
+                      <input type="url" id="hiddenContentImageUrl" class="form-input url-input" value="https://previews-only.b-cdn.net/Offerz/src/scratch/hpa_bottom_scratch_edges.webp" />
+                      <div class="url-tooltip">https://previews-only.b-cdn.net/Offerz/src/scratch/hpa_bottom_scratch_edges.webp</div>
+                      <button type="button" class="copy-button">Copy</button>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="cursorUrl" class="form-label">Cursor Image URL</label>
+                    <div class="url-input-container">
+                      <input type="url" id="cursorUrl" class="form-input url-input" value="https://previews-only.b-cdn.net/Offerz/src/scratch/scratch-coin.png" />
+                      <div class="url-tooltip">https://previews-only.b-cdn.net/Offerz/src/scratch/scratch-coin.png</div>
+                      <button type="button" class="copy-button">Copy</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Canvas Configuration -->
+                <div class="settings-group">
+                  <h3 class="settings-title">Canvas Configuration</h3>
+
+                  <div class="form-group">
+                    <label for="canvasWidth" class="form-label">Canvas Width</label>
+                    <input type="number" id="canvasWidth" class="form-input" value="" min="1" required placeholder="Auto (banner width)" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="canvasHeight" class="form-label">Canvas Height</label>
+                    <input type="number" id="canvasHeight" class="form-input" value="" min="1" required placeholder="Auto (banner height)" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="canvasLeft" class="form-label">Canvas Left Position</label>
+                    <input type="number" id="canvasLeft" class="form-input" value="0" required />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="canvasTop" class="form-label">Canvas Top Position</label>
+                    <input type="number" id="canvasTop" class="form-input" value="0" required />
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <!-- Configuration Summary -->
+          <section id="configSummary" class="form-section summary-section" style="display: none">
+            <h2 class="section-title">Configuration Summary</h2>
+            <div id="summaryContent" class="summary-content"></div>
+          </section>
+
+          <!-- Generate Button -->
+          <div class="form-actions">
+            <button type="submit" id="generateBtn" class="btn-primary" disabled>
+              <span class="btn-icon">🔨</span>
+              Generate Banner Template
+            </button>
+          </div>
+        </form>
+      </main>
+
+      <!-- Loading Overlay -->
+      <div id="loadingOverlay" class="loading-overlay" style="display: none">
+        <div class="loading-content">
+          <div class="loading-spinner"></div>
+          <h3>Generating Banner Template...</h3>
+          <p>Please wait while we create your banner files</p>
+        </div>
+      </div>
+
+      <!-- Success Modal -->
+      <div id="successModal" class="modal" style="display: none">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>✅ Banner Generated Successfully!</h3>
+          </div>
+          <div class="modal-body">
+            <p>Your banner template has been generated and is ready for download.</p>
+            <div class="file-list">
+              <div class="file-item">📄 index.html</div>
+              <div class="file-item">📋 manifest.json</div>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <button id="downloadBtn" class="btn-primary">
+              <span class="btn-icon">📥</span>
+              Download Banner Folder
+            </button>
+            <button id="closeModal" class="btn-secondary">Create Another</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="./script-v3.js"></script>
+  </body>
+</html>
